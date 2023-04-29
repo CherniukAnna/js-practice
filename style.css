@@ -1,0 +1,54 @@
+.block{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+#btn{
+ width: 45px;  
+ height: 45px; 
+ padding-bottom: 20px;
+}
+.burger{
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    
+}
+.burger::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: black;
+}
+.burger::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: black;
+}
+.sp{
+    opacity: 0;
+}
+
+.box1{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  width: 300px;
+  height: 300px;
+ }
+ .box2{
+  width: 150px;
+  height: 150px;
+  background: blue;
+ }
