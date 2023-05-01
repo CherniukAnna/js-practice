@@ -1,0 +1,27 @@
+.box{
+    width: 350px;
+    background-color: antiquewhite;
+}
+.title{
+    font-size: 38px;
+    text-align: center;
+    color: rgb(162, 205, 205);
+}
+.list{
+    list-style-type: none;
+    padding: 50px;
+}
+
+.item{
+  padding: 10px;  
+}
+.item-active{
+    color: red;
+}
+
+.value{
+    border: 3px;
+    border-color: aquamarine;
+    border-style: outset;
+    width: 80px;
+}
