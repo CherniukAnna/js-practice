@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="recipe-list">
+            <h2>Рецепты</h2>
+            <ul id="recipeList">
+                <!-- Здесь будут отображаться рецепты -->
+            </ul>
+        </section>
+        <section class="recipe-details">
+            <h2>Детали рецепта</h2>
+            <div id="recipeDetails">
+                <!-- Здесь будут отображаться детали рецепта -->
+            </div>
+        </section>
+    </div>
+    </main>
+    <section class="add-recipe">
+        <h2>Добавить рецепт</h2>
+        <form id="addRecipeForm">
+            <label for="recipeName">Название:</label>
+            <input type="text" id="recipeName" required>
+            <label for="recipeCategory">Категория:</label>
+            <input type="text" id="recipeCategory" required>
+            <label for="recipeInstructions">Инструкции:</label>
+            <textarea id="recipeInstructions" required></textarea>
+            <button type="submit">Добавить</button>
+        </form>
+    </section>
+
+
+    <script src="./recipe.js"></script>
+</body>
+</html>

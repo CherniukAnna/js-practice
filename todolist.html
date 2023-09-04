@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .titlle {
+        text-align: center;
+    }
+
+    .todo {
+        text-align: center;
+    }
+
+    .input {
+        width: 450px;
+        height: 60px;
+    }
+
+    .btn {
+        padding: 4px 12px;
+        margin-left: 20px;
+        background-color: antiquewhite;
+    }
+
+    .item {
+        background-color: bisque;
+        list-style: none;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 450px;
+
+    }
+    .title-info{
+        color: brown;
+        padding-top: 150px;
+        padding-bottom: 30px;
+    }
+
+
+
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-list,
+.recipe-details {
+    width: 45%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+.add-recipe {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+
+<body>
+    <h1 class="titlle">Todo list</h1>
+    <div class="todo">
+        <input type="text" id="input">
+        <button id="btn">Add</button>
+        <ul class="list"></ul>
+        <div>
+            Total:
+            <span id="total"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Конвертер валют</h1>
+        <form id="converterForm">
+            <label for="amount">Сумма:</label>
+            <input type="number" id="amount" required>
+            <label for="fromCurrency">Из валюты:</label>
+            <select id="fromCurrency" required>
+                <option value="usd">Доллар</option>
+                <option value="eur">Евро</option>
+                <option value="uah">Гривна</option>
+            </select>
+            <label for="toCurrency">В валюту:</label>
+            <select id="toCurrency" required>
+                <option value="usd">Доллар</option>
+                <option value="eur">Евро</option>
+                <option value="uah">Гривна</option>
+            </select>
+            <button type="submit" id="button">Конвертировать</button>
+        </form>
+        <div id="resultContainer">
+            <h2>Результат:</h2>
+            <p id="conversionResult"></p>
+        </div>
+    </div>
+
+    <form action="" novalidate class="form-validate">
+        <input type="email" class="input-email" required>
+        <input type="text" class="input-text" required>
+        <button type="submit" class="btn-form">click</button>
+    </form>
+
+    <div>
+        <input type="text" id="input-value">
+        
+
+        <button id="btn-check">check</button>
+
+        <p id="text"></p>
+    </div>
+
+    <form action="" class="form-genereit">
+        
+        <button id="btn-genereitet">Клик</button>
+        <div class="text-genereit"></div>
+    </form>
+
+    <div class="">
+        <button id="btn-gen">Click</button>
+        <div class="text-gen"></div>
+    </div>
+
+    <div class="">
+        <button id="like-btn">LIKE</button>
+        <button id="dislike-btn">DISLIKE</button>
+        <p id="total-text"></p>
+    </div>
+
+
+    <div class="product-card">
+        <h3>Товар 1</h3>
+        <p>Цена: $100</p>
+        <button class="discount-btn">Применить скидку</button>
+        <p class="discount-amount"></p>
+    </div>
+    
+    <div class="product-card">
+        <h3>Товар 2</h3>
+        <p>Цена: $200</p>
+        <button class="discount-btn">Применить скидку</button>
+        <p class="discount-amount"></p>
+    </div>
+    
+    <div class="product-card">
+        <h3>Товар 3</h3>
+        <p>Цена: $150</p>
+        <button class="discount-btn">Применить скидку</button>
+        <p class="discount-amount"></p>
+    </div>
+
+    <div class="container-users"></div>
+
+    <div class="" width="350"></div>
+
+    <h1 class="title-info">User Contact App</h1>
+    <input type="text" id="searchInput" placeholder="Введите имя пользователя">
+    <button id="searchButton">Поиск</button>
+    <div id="userInfo"></div>
+    <br>
+    <br>
+    
+    <section class="recipe-list">
+            <h2>Рецепты</h2>
+            <ul id="recipeList">
+                <!-- Здесь будут отображаться рецепты -->
+            </ul>
+        </section>
+        <section class="recipe-details">
+            <h2>Детали рецепта</h2>
+            <div id="recipeDetails">
+                <!-- Здесь будут отображаться детали рецепта -->
+            </div>
+        </section>
+    </main>
+    <section class="add-recipe">
+        <h2>Добавить рецепт</h2>
+        <form id="addRecipeForm">
+            <label for="recipeName">Название:</label>
+            <input type="text" id="recipeName" required>
+            <label for="recipeCategory">Категория:</label>
+            <input type="text" id="recipeCategory" required>
+            <label for="recipeInstructions">Инструкции:</label>
+            <textarea id="recipeInstructions" required></textarea>
+            <button type="submit">Добавить</button>
+        </form>
+    </section>
+
+
+    <script src="js/totolist.js" type="module"></script>
+</body>
+
+</html>

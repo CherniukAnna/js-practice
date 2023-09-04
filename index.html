@@ -15,12 +15,78 @@
            border: 2px;
            border-color: red;
         }
+        input{
+            display: block;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+        .anime{
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+            opacity: 0;
+            transition: opacity 5s ease-in-out;
+        }
+        .title-anime{
+            height: 500px;
+        }
+        /* .block{
+            display: flex;
+        } */
     </style>
 </head>
 <body>
+
+    
     <div class="box1 box" id="1">
         <div class="box2 box" id="2"></div>
     </div>
+    <div class="btn">Click</div>
+    <button class="ntn-click">CLICK</button>
+    <input type="text" class="input">
+    <h1> Checkbox</h1>
+    <input type="checkbox" id="check">
+    <label for="check">Checkbox</label>
+
+    <h2>Переключатель</h2>
+    <label for="password">Пароль:</label>
+    <input type="password" id="password">
+    <label for="show">Показать пароль</label>
+    <input type="checkbox" id="show">
+    <h2>Подсказка по вводу</h2>
+    <input type="text" id="clue">
+    <label for="clue">Подсказка по вводу</label>
+    <ul class="list"></ul>
+    <h2 class="title-anime">Animations</h2>
+    <div class="anime"></div>
+    <h2>ФИЛЬТРАЦИЯ И СОРТИРОВКА МАССИВА ОБЪЕКТОВ</h2>
+    
+        <input type="text" id="filterInput" placeholder="Фильтр по имени">
+        <button id="sortButton">Сортировка по возрасту</button>
+        <ul id="userList"></ul>
+
+    <h2>Калькулятор</h2>
+    <label for="product">Количество товара</label>
+    <input type="number" id="product">
+    <label for="price">Цена за еденицу товара</label>
+    <input type="number" id="price">
+    <button class="call">Рассчитать</button>
+    <p class="totol-price"></p>
+
+    <h2>Прайс</h2>
+    <div>
+        <input type="text" id="input-task" placeholder="введите задачу">
+        <button id="btn-task">Добавит</button>
+        <ul class="task-list"></ul>
+    </div>
+
+    <
+    
+
+    
+   
+    
+
     <!-- <div id="btn"><span class="burger"></span>
     </div>
     <div class="block">
@@ -36,6 +102,9 @@ Hello world
     <button id="plas">+</button> -->
     <!-- <div id="box"> </div> -->
     <!-- <script src="array.js" type="module"></script> -->
-    <script src="function.js" type="module"></script>
+    <!-- <script src="function.js" type="module"></script> -->
+    <script src="js/filter.js" type="module"></script>
+    
+
 </body>
 </html>
