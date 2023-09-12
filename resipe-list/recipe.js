@@ -40,7 +40,8 @@ function recipeCalled() {
     listEl.appendChild(li);
   });
 
-   localStorage.setItem("recipes", JSON.stringify(recipes)); 
+  localStorage.setItem("recipes", JSON.stringify(recipes)); 
+  
 }
 
 
@@ -57,12 +58,14 @@ function markapNewRecipe(name, category, instructions) {
   console.log(recipes);
 
   recipeCalled(newRecipe);
-  localStorage.setItem("recipes", JSON.stringify(newRecipe)); 
-// localStorage.setItem("recipes") || ''; 
+  // localStorage.setItem("recipes", JSON.stringify(newRecipe)); 
 
-  recipeName.value = "";
-  recipeCategory.value = "";
-  recipeInstructions.value = "";
+  
+  formEl.reset()
+
+  // recipeName.value = "";
+  // recipeCategory.value = "";
+  // recipeInstructions.value = "";
 
 }
 
@@ -76,10 +79,25 @@ formEl.addEventListener("submit", function (e) {
 
   if (recipeName && recipeCategory && recipeInstructions) {
     markapNewRecipe(recipeName, recipeCategory, recipeInstructions);
-    }
-    
+    safeRecipe()
+  }
   
 });
 
+function loadRecipes() {
+  const storedRecipe = localStorage.getItem('recipes');
+  if (storedRecipe) {
+    recipes = JSON.parse(storedRecipe)
+  }
 
-recipeCalled();
+  recipeCalled();
+}
+
+function safeRecipe() {
+  localStorage.setItem('recipes', JSON.stringify(recipes))
+}
+
+loadRecipes();
+
+
+
