@@ -35,46 +35,49 @@ console.log(user);
 class Bookshelf {
   constructor() {
     this.books = [];
+    console.log(this.books);
   }
 
   addBook(book) {
     this.books.push(book);
   }
 
-  removeBook(bookTitle) {
-    const index = this.books.indexOf((book) => book.title === bookTitle);
+  removeBook(title) {
+   
+    const index = this.books.findIndex(readed => readed.title === title);
+    console.log(index);
     if (index !== -1) {
-      this.books.splice(index, 1);
-      console.log(`Delete book`);
+      const deleteEl = this.books.splice(index, 1);
+      console.log(` Delete book: ${deleteEl.title}`);
     } else {
-      console.log(`Not deleted book`);
+      console.log(`Not deleted book: ${deleteEl.title}`);
     }
     }
 
 
     
   listBooks() {
-    console.log("Список книг на полці:");
+    console.log("List of books on the shelf:");
     this.books.forEach((book) => {
-      console.log(`- ${book.title} (Автор: ${book.author})`);
+      console.log(` ${book.title} \n Autor: ${book.author} `);
     });
   }
 }
 
-// Приклад використання класу "Книжна полка"
-const myBookshelf = new Bookshelf();
 
-// Додати книги на полку
-myBookshelf.addBook({ title: "Книга 1", author: "Автор 1" });
-myBookshelf.addBook({ title: "Книга 2", author: "Автор 2" });
-myBookshelf.addBook({ title: "Книга 3", author: "Автор 3" });
+const listBookshelf = new Bookshelf();
 
-// Відобразити список книг на полці
-myBookshelf.listBooks();
 
-// Видалити книгу з полки
-myBookshelf.removeBook("Книга 2");
+listBookshelf.addBook({ title: "book Green", author: "Rose Smit" });
+listBookshelf.addBook({ title: "book Red", author: "Jimmy Stonler" });
+listBookshelf.addBook({ title: "book Gray", author: "Stiv Winst" });
+listBookshelf.addBook({ title: "book Yellowe", author: "Christy Young" });
 
-// Перевірити список книг після видалення
-myBookshelf.listBooks();
+listBookshelf.listBooks();
 
+
+listBookshelf.removeBook("book Red");
+
+listBookshelf.listBooks();
+
+console.log(listBookshelf);
