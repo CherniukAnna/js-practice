@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #form {
+            background-color: rgba(27, 26, 28, 0.823);
+            width: 440px;
+            height: 540px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 13px;
+            border-radius:25px
+        }
+
+        input{
+            width: 340px;
+            
+            border-radius: 8px;
+            border: solid 1px gray;
+            background-color: rgba(170, 154, 154, 0.952);
+            box-shadow: 4px 8px 8px 0 rgb(30, 29, 29);
+            outline:none;
+            font-size: 20px;
+            color:rgb(220, 228, 228);
+            padding: 11px;
+        }
+
+        #btn{
+            width: 80px;
+            padding: 8px;
+            border:none;
+            background-color: rgb(105, 105, 91);
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 0 rgb(30, 29, 29);
+            outline:none;
+            margin-top: 20px;
+        }
+
+        ::placeholder{
+            color:rgb(190, 186, 186);
+            font-size: 18px;
+            padding: 8px;
+        }
+       
+        .title{
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <form action="" id="form">
+        <h class="title">TELEGRAM MESSAGER</h>
+
+        <input id="name" type="text" placeholder="name">
+        <input id="age" type="text" placeholder="age">
+        <input id="email" type="text" placeholder="email">
+        <button id="btn">CLICK</button>
+    </form>
+
+    <script src="./telegram.js"></script>
+</body>
+</html>
