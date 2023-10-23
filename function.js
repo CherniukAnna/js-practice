@@ -317,16 +317,113 @@ showProduct(product) - коллбек приймаючий обект проду
 
 // })
 
-const boxEl = document.querySelectorAll('.box');
-console.log(boxEl);
+// const boxEl = document.querySelectorAll('.box');
+// console.log(boxEl);
 
-for (const box of boxEl) {
-    box.addEventListener('click', function (event) {
-        // console.log(event
-        // );
-        event.stopPropagation()
-        let id = this.getAttribute('id')
-        console.log(id
-        );
-    })
-}
+// for (const box of boxEl) {
+//     box.addEventListener('click', function (event) {
+//         // console.log(event
+//         // );
+//         event.stopPropagation()
+//         let id = this.getAttribute('id')
+//         console.log(id
+//         );
+//     })
+// }
+
+
+//Напишите функцию которая удаляет каждый 5 элемент массива
+//Использовать только цикл for
+  
+// const originalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+// function deleteElement (arr) {
+//     const newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if ((i + 1) % 5 !== 0) {
+//            newArr.push(arr[i])
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(deleteElement(originalArray));
+
+
+
+//Сделайте строку, содержащую столько нулей, сколько указано в переменной.
+// let num = 5;
+// let string = "0".repeat(num);
+// for (let i = 0; i < num; i++) {
+//     string += '0'
+    
+// }
+// console.log(string);
+
+
+//Напишите функцию которая считает количество букв "а" в строке.
+//Через цікл for без іспользованія методов массіва
+
+// let str = "JavaScript forever Alone"
+// function amountLetter(str) {
+//     let string = 0;
+//     for (let i = 0; i < str.length; i++) {
+        
+//         if (str[i] === 'a' || str[i] === 'A') {
+//             string++;
+//         }
+        
+//     }
+//     return string;
+// }
+// console.log(amountLetter(str));
+
+// 1 task
+//Сделайте функцию, которая параметром будет принимать число и удалять из него нули.
+
+// function sortNum (num) {
+//     let newNum = []
+//     for (let i = 0; i < num.length; i++) {
+//         if (i !== 0) {
+//             newNum.push(i)
+//         }
+        
+//     }
+//     return newNum.join('');
+// }
+// console.log(sortNum('1025402'));
+
+
+// 2 task
+//Сделайте функцию, которая параметром будет принимать массив с числами и возвращать второе по величине число.
+// const arr = [2,6,15,18,6,11,22.5]
+// function secondMaxNum (arr) {
+//     arr.sort((a, b) => b - a)
+//     return arr[1];
+// }
+    
+// let secondNum = secondMaxNum(arr);
+// console.log(secondNum);
+
+// 3 task
+//Найти среднее значение элементов двумерного массива
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+// function findValue(matrix) {
+//     let sum = 0;
+//     let count = 0
+//     for (let i = 0; i < matrix.length; i++) {
+//         for (let j = 0; j < matrix[i].length; j++) {
+//             sum += matrix[i][j];
+//             count++;
+            
+//         }
+//     }
+//     return sum / count
+// }
+
+// const value = findValue(matrix);
+// console.log(value);
